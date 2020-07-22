@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bithour" />
+    <meta name="author" content="Bithour" />
+    <title>Bithour</title>
+    <!-- BOOTSTRAP AND THEIR DEPENDENCIES -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- ICON UTILITIES -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+    <!-- ANOTHER UTITILITES -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- CUSTOM UTILITIES -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  </head>
+  <body>
+    <div
+      id="loader"
+      class="bg-full-dark"
+      style="
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        overflow: hidden;
+        padding-top: 40vh;
+      "
+    >
+      <div class="mx-auto text-center animated bounce">
+        <img src="img/logo-inverse.png" style="max-height: 48px;" />
+      </div>
+    </div>
+    <div id="app" class="bg-full-dark">
+      <section id="header">
+        <header class="header-video">
+          <div class="overlay"></div>
+          <video
+            playsinline="playsinline"
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+          >
+            <source src="" type="video/mp4" />
+            <source
+              src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+              <div class="w-100 text-white">
+                <h1 class="is-montserrat-font">INTRODUCING</h1>
+                <p class="font-18 text-bold mb-0">BITHOUR PRODUCTION</p>
+                <button
+                  class="btn btn-primary rounded text-bold mt-5 custom-pad-btn"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg fixed-top bg-full-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="./img/logo-inverse.png" alt="" width="50" />
+            </a>
+
+            <button
+              class="navbar-toggler text-white"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <ion-icon class="text-white" name="menu"></ion-icon>
+            </button>
+
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link text-bold text-white pl-sm-3" href="#">
+                    About us
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-bold text-white pl-sm-3" href="#">
+                    Our Service
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-bold text-white ml-sm-3" href="#">
+                    Portfolio
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <section id="about" class="py-5 bg-full-dark">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-12 col-lg-6 text-center px-5">
+              <h1 class="is-montserrat-font d-sm-block d-lg-none">
+                About Us
+              </h1>
+              <img src="./img/big-logo.png" class="img-fluid" />
+            </div>
+            <div class="col-12 col-lg-6">
+              <h1 class="is-montserrat-font d-none d-lg-block">
+                About Us
+              </h1>
+              <p class="mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <button
+                class="btn btn-primary rounded text-bold mt-5 custom-pad-btn"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="our-product" class="pt-5 bg-white ++">
+        <div class="container">
+          <div class="row pt-5">
+            <div class="col-12 text-center">
+              <h1 class="is-montserrat-font text-dark">
+                Our Product
+              </h1>
+              <small class="text-dark">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor.
+              </small>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 my-5 text-center">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                class="img-fluid rounded"
+              />
+              <h5 class="is-montserrat-font my-3 text-dark">
+                Production Movie
+              </h5>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-4 my-5 text-center">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(36).jpg"
+                class="img-fluid rounded"
+              />
+              <h5 class="is-montserrat-font my-3 text-dark">
+                Digital Advertistment
+              </h5>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-4 my-5 text-center">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(37).jpg"
+                class="img-fluid rounded"
+              />
+              <h5 class="is-montserrat-font my-3 text-dark">Musik Video</h5>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-4 my-5 text-center">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(38).jpg"
+                class="img-fluid rounded"
+              />
+              <h5 class="is-montserrat-font my-3 text-dark">
+                Production Movie
+              </h5>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-4 my-5 text-center">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(39).jpg"
+                class="img-fluid rounded"
+              />
+              <h5 class="is-montserrat-font my-3 text-dark">
+                Digital Advertistment
+              </h5>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-4 my-5 text-center">
+              <img
+                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(40).jpg"
+                class="img-fluid rounded"
+              />
+              <h5 class="is-montserrat-font my-3 text-dark">Musik Video</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="our-portfolio" class="bg-dark">
+        <header class="header-video">
+          <div class="overlay"></div>
+          <video
+            playsinline="playsinline"
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+          >
+            <source src="" type="video/mp4" />
+            <!-- <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4" /> -->
+          </video>
+          <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+              <div class="w-100 text-white">
+                <h1 class="is-montserrat-font">OUR PORTFOLIO</h1>
+                <button
+                  class="btn btn-primary rounded text-bold mt-5 custom-pad-btn"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <section id="our-product" class="pt-5 bg-full-dark">
+        <div class="container">
+          <div class="row p-t-60 p-b-30">
+            <div class="col-md-4 m-t-15" style="">
+              <div class="d-block d-xl-none d-md-none m-t-30"></div>
+              <p class="is-montserrat-font">BITHOUR PRODUCTION</p>
+              <p class="font-08 m-t-30">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+
+            <div class="col-md-2 m-t-15" style="line-height: 2em;">
+              <p class="is-aller-semibold font-12">Navigation</p>
+              <a href="#" class="m-b-15 font-09 text-white">About </a><br />
+              <a href="#" class="m-b-15 font-09 text-white">Our Services </a
+              ><br />
+              <a href="#" class="m-b-15 font-09 text-white">Portfolio</a><br />
+              <a href="#top" class="m-b-15 font-09 text-white">Back to Top</a
+              ><br />
+            </div>
+
+            <div class="col-md-3 m-t-15 text-white">
+              <p class="font-11">Follow Us</p>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon class="ml-2" name="logo-facebook"></ion-icon
+              ></a>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon class="ml-2" name="logo-twitter"></ion-icon
+              ></a>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon class="ml-2" name="logo-youtube"></ion-icon
+              ></a>
+              <p class="font-09 m-t-30 m-b--0">Or contact us on</p>
+              <a target="_blank" href="tel:+123" class="text-white font-08"
+                >+12 3434 512 4 (Ikbal)</a
+              ><br />
+              <a target="_blank" href="tel:+123" class="text-white font-08"
+                >marketing@bithourproduction.com</a
+              >
+            </div>
+
+            <div class="col-md-3 m-t-15" style="line-height: 2em;">
+              <p class="is-aller-semibold font-12">For Bussiness Inquiries</p>
+              <a
+                class="border text-white btn-xs custom-pad-btn is-rounded"
+                href="tel:+123"
+                >+12 3434 512 4 (Ikbal)</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#app")
+          .imagesLoaded()
+          .always(function (instance) {})
+          .done(function (instance) {
+            $("#loader").remove();
+          })
+          .fail(function () {
+            $("#loader").remove();
+          })
+          .progress(function (instance, image) {
+            var result = image.isLoaded ? "loaded" : "broken";
+            console.log("image is " + result + " for " + image.img.src);
+          });
+      });
+    </script>
+  </body>
+</html>
