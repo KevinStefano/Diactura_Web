@@ -23,6 +23,8 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
 	<!-- CUSTOM UTILITIES -->
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<style type="text/css">
@@ -65,6 +67,48 @@
 	</style>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg fixed-top bg-full-dark">
+		<div class="container">
+		  <a class="navbar-brand" href="#">
+			<img src="./img/logo-inverse.png" alt="" width="50" />
+		  </a>
+
+		  <button
+			class="navbar-toggler text-white"
+			type="button"
+			data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		  >
+			<ion-icon class="text-white" name="menu"></ion-icon>
+		  </button>
+
+		  <div
+			class="collapse navbar-collapse justify-content-between"
+			id="navbarSupportedContent"
+		  >
+			<ul class="nav navbar-nav ml-auto">
+			  <li class="nav-item">
+				<a class="nav-link text-bold text-white pl-sm-3" href="#">
+				  About us
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-bold text-white pl-sm-3" href="#">
+				  Our Service
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-bold text-white ml-sm-3" href="#">
+				  Portfolio
+				</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
 	<div id="loader" class="bg-full-dark" style="height:100vh;width:100%;position:fixed;z-index: 999;overflow:hidden;padding-top: 40vh">
 		<div class="mx-auto text-center animated bounce">
 			<img src="img/logo-inverse.png"  style="max-height: 48px">
@@ -72,10 +116,10 @@
 	</div>
 	<div id="app" class="bg-full-dark">
 		<section id="about" class=" bg-full-dark" >
-			<div class="container">
+			<div class="container" data-aos="fade-left">
 				<div class="row py-5" >
-					<div class="col-12 col-lg-6 text-center px-5">
-						<h1 class="is-montserrat-font d-sm-block d-lg-none">
+					<div class="col-12 col-lg-6 text-center">
+						<h1 class="is-montserrat-font d-sm-block d-lg-none  m-t-10">
 							About Us
 						</h1>
 						<img src="./img/big-logo.png" class="img-fluid ">
@@ -96,23 +140,24 @@
 				</div>
 			</div>
 			<svg
-          class="pic-1"
-          width="1500"
-          height="125"
-          viewBox="0 0 1500 125"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M453.5 54C295.1 150.4 85.5 94.1667 0.5 54V125.5H1649.5V65C1612 21.6667 1488.3 -41.2 1293.5 54C1098.7 149.2 919.667 93.6667 854.5 54C786.833 13.8333 611.9 -42.4 453.5 54Z"
-            fill="white"
-            stroke="black"
-          />
-        </svg>
+			class="pic-1"
+			width="1499"
+			height="109"
+			viewBox="0 0 1499 109"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		  >
+			<path
+			  d="M814.5 62C506.5 135.2 143.5 92.5 0.5 62V121H1602V27.5L1497.5 9.49998C1398.17 -3.50002 1122.5 -11.2 814.5 62Z"
+			  fill="white"
+			  stroke="black"
+			/>
+		  </svg>
+				
 		</section>
 
-		<section id="about" class="py-5 bg-white" >
-			<div class="container">
+		<section id="about" class="py-5 bg-white"  >
+			<div class="container" data-aos="fade-right">
 				<div class="row py-5" >
 					<div class="col-12 col-lg-5 px-5">
 						<img src="img/target-icon.png" style="max-width: 128px">
@@ -140,7 +185,7 @@
 			</div>
 		</section>
 
-		<section id="story" class="m-t-15 m-b-15 container">
+		<section id="story" class="m-t-15 m-b-15 container" data-aos="slide-up">
 			<div class="row">
 				<div class="col-md-12">
 					<h5 class="is-montserrat-font">Our Story</h5>
@@ -294,6 +339,14 @@
 
 
 	</div>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000,
+      });
+	</script>
+	
 	<script type="text/javascript">	  
 		$(document).ready(function(){
 			$('#app').imagesLoaded()
@@ -319,6 +372,8 @@
 			speed : 300,
 			draggable:true
 		})
+
+		
 	</script>
 </body>
 </html>
