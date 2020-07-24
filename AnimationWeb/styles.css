@@ -1,0 +1,156 @@
+*,
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000;
+  color: white;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+}
+
+#typography {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+path {
+  stroke: #ffffff;
+  fill: #ffffff;
+  stroke-dasharray: 1800;
+  opacity: 1;
+  animation: animate 3s cubic-bezier(0, 0.1, 1, 0);
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1800;
+  }
+  30% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1800;
+  }
+
+  90% {
+    fill: rgba(255, 255, 255, 0);
+    stroke-dashoffset: 1800;
+  }
+
+  100% {
+    opacity: 1;
+    fill: rgba(255, 255, 255, 1);
+    stroke-dashoffset: 0;
+  }
+}
+
+/* #logo path:nth-child(1) {
+  stroke-dasharray: 30px;
+} */
+/* #typography-1 path:nth-child(2) {
+  stroke-dasharray: 50px;
+}
+#typography-1 path:nth-child(3) {
+  stroke-dasharray: 50px;
+}
+#typography-1 path:nth-child(4) {
+  stroke-dasharray: 50px;
+}
+#typography-1 path:nth-child(5) {
+  stroke-dasharray: 50px;
+}
+#typography-1 path:nth-child(6) {
+  stroke-dasharray: 50px;
+}
+#typography-1 path:nth-child(7) {
+  stroke-dasharray: 50px;
+} */
+
+.rounded {
+  border-radius: 10px !important;
+}
+.bg-full-dark {
+  background: rgb(0, 0, 0);
+}
+
+.font-04 {
+  font-size: 0.4em;
+}
+.font-05 {
+  font-size: 0.5em;
+}
+.font-06 {
+  font-size: 0.6em;
+}
+.font-07 {
+  font-size: 0.7em;
+}
+.font-08 {
+  font-size: 0.8em;
+}
+.font-09 {
+  font-size: 0.9em;
+}
+.font-10 {
+  font-size: 1em;
+}
+.font-11 {
+  font-size: 1.1em;
+}
+.font-12 {
+  font-size: 1.2em;
+}
+.font-13 {
+  font-size: 1.3em;
+}
+.font-14 {
+  font-size: 1.4em;
+}
+.font-15 {
+  font-size: 1.5em;
+}
+.font-16 {
+  font-size: 1.6em;
+}
+.font-17 {
+  font-size: 1.7em;
+}
+.font-18 {
+  font-size: 1.8em;
+}
+.font-19 {
+  font-size: 1.9em;
+}
+.font-20 {
+  font-size: 2em;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-white {
+  color: white;
+}
+.text-colored {
+  color: #0a3b5b !important;
+}
+
+.text-dark {
+  color: #2f3640 !important;
+}
+
+.text-black {
+  color: #000000 !important;
+}
