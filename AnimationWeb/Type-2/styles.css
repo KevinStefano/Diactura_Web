@@ -11,7 +11,6 @@ html {
 }
 
 #header {
-  position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -29,8 +28,30 @@ html {
   pointer-events: none;
 }
 *:hover ~ #cursor {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+}
+
+#hello {
+  font-size: 50px;
+  font-weight: 900;
+  -webkit-text-stroke: 2px black;
+  color: white;
+  position: relative;
+}
+
+#hello:before {
+  content: "Hello";
+  position: absolute;
+
+  width: 0;
+  color: #000000 !important;
+  transition: 0.9s;
+  overflow: hidden; */
+}
+ 
+#hello:hover:before {
+  width: 100%;
 }
 
 .rounded {
