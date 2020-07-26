@@ -13,7 +13,6 @@ html {
 #header {
   height: 100vh;
   width: 100%;
-  overflow: hidden;
 }
 
 #cursor {
@@ -38,19 +37,29 @@ html {
   -webkit-text-stroke: 2px black;
   color: white;
   position: relative;
+
+  transition-duration: 0.8s;
 }
 
 #hello:before {
   content: "Hello";
+  font-size: 50px;
   position: absolute;
 
   width: 0;
   color: #000000 !important;
-  transition: 0.9s;
-  overflow: hidden; */
+  overflow: hidden;
+
+  transition-duration: 0.8s;
 }
- 
+
+#hello:hover {
+  font-size: 70px;
+  transition-duration: 0.8s;
+}
 #hello:hover:before {
+  transition-duration: 0.8s;
+  font-size: 70px;
   width: 100%;
 }
 
