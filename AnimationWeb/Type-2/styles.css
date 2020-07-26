@@ -1,0 +1,114 @@
+*,
+html {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  cursor: none;
+}
+
+#header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #000000;
+  box-sizing: border-box;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+*:hover ~ #cursor {
+  width: 100px;
+  height: 100px;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+.bg-full-dark {
+  background: rgb(0, 0, 0);
+}
+
+.font-04 {
+  font-size: 0.4em;
+}
+.font-05 {
+  font-size: 0.5em;
+}
+.font-06 {
+  font-size: 0.6em;
+}
+.font-07 {
+  font-size: 0.7em;
+}
+.font-08 {
+  font-size: 0.8em;
+}
+.font-09 {
+  font-size: 0.9em;
+}
+.font-10 {
+  font-size: 1em;
+}
+.font-11 {
+  font-size: 1.1em;
+}
+.font-12 {
+  font-size: 1.2em;
+}
+.font-13 {
+  font-size: 1.3em;
+}
+.font-14 {
+  font-size: 1.4em;
+}
+.font-15 {
+  font-size: 1.5em;
+}
+.font-16 {
+  font-size: 1.6em;
+}
+.font-17 {
+  font-size: 1.7em;
+}
+.font-18 {
+  font-size: 1.8em;
+}
+.font-19 {
+  font-size: 1.9em;
+}
+.font-20 {
+  font-size: 2em;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-white {
+  color: white;
+}
+.text-colored {
+  color: #0a3b5b !important;
+}
+
+.text-dark {
+  color: #2f3640 !important;
+}
+
+.text-black {
+  color: #000000 !important;
+}
