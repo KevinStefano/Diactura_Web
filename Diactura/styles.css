@@ -72,3 +72,24 @@ html {
     rgba(255, 255, 255, 0.7) 100%
   );
 }
+
+.carousel-nav-icon {
+  height: 48px;
+  width: 48px;
+}
+.carousel-item {
+  margin: 8px;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+}
+/* nothing below this point is needed*/
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700,800,900&display=swap");
+/* body {
+  background-color: #f2f2f2;
+  color: #171717;
+  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
