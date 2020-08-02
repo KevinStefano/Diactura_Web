@@ -9,23 +9,39 @@ html {
   overflow: hidden;
   cursor: none;
 }
-
+.body {
+}
 #header {
   height: 100vh;
   width: 100%;
+}
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }
 
 #cursor {
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 1.5px solid #000000;
+  border: 4px solid;
+  /* border-image: linear-gradient(45deg, rgb(55, 0, 143), rgb(66, 146, 250)) 1;
+  border-radius: 1000px !important; */
+  border-radius: 50%;
   box-sizing: border-box;
   transition: 0.1s;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
   pointer-events: none;
 }
+
 *:hover ~ #cursor {
   width: 70px;
   height: 70px;
@@ -34,23 +50,28 @@ html {
 #hello {
   font-size: 50px;
   font-weight: 900;
-  -webkit-text-stroke: 2px black;
-  color: white;
+  background: linear-gradient(123.5deg, #04afda -10.54%, #94c8d3 93.67%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: white; /* same as background */
   position: relative;
 
   transition-duration: 0.8s;
 }
 
 #hello:before {
-  content: "Hello";
+  content: "service now";
+
+  white-space: pre;
   font-size: 50px;
   position: absolute;
-
   width: 0;
-  color: #000000 !important;
   overflow: hidden;
-
   transition-duration: 0.8s;
+
+  background: linear-gradient(123.5deg, #04afda -10.54%, #94c8d3 93.67%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 #hello:hover {
@@ -61,6 +82,36 @@ html {
   transition-duration: 0.8s;
   font-size: 70px;
   width: 100%;
+}
+
+.card {
+  border-color: white !important;
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: all 600ms ease;
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+}
+
+.front {
+  transform: perspective(600px) rotateX(0deg);
+}
+
+.back {
+  background: white;
+  transform: perspective(600px) rotateX(180deg);
+}
+.card:hover > .front {
+  transform: perspective(600px) rotateX(180deg);
+}
+
+.card:hover > .back {
+  transform: perspective(600px) rotateX(0deg);
 }
 
 .rounded {
