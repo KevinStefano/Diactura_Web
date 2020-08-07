@@ -1,10 +1,11 @@
 body {
   overflow-x: hidden !important;
+  background-color: black;
 }
 
 *,
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
   scroll-behavior: smooth;
 }
@@ -738,9 +739,141 @@ html {
   background-size: cover;
 }
 
-.about {
-  height: 100vh;
+@media (max-width: 576px) {
+  .rating {
+    height: 45vh;
+  }
+
+  .news {
+    height: 65vh;
+    margin-bottom: 15vh;
+  }
+  .carousel-2 {
+    height: 75vh;
+  }
+
+  .review {
+    height: 100vh;
+  }
+  .series {
+    height: 100vh;
+  }
 }
 
-#cont-1 {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .rating {
+    height: 55vh;
+  }
+
+  .news {
+    height: 65vh;
+    margin-bottom: 15vh;
+  }
+  .carousel-2 {
+    height: 75vh;
+  }
+
+  .review {
+    height: 100vh;
+  }
+  .series {
+    height: 100vh;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .rating {
+    height: 65vh;
+  }
+
+  .news {
+    height: 55vh;
+    margin-bottom: 15vh;
+  }
+  .carousel-2 {
+    height: 75vh;
+  }
+
+  .review {
+    height: 100vh;
+  }
+  .series {
+    height: 100vh;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rating {
+    height: 75vh;
+  }
+
+  .news {
+    height: 65vh;
+    margin-bottom: 15vh;
+  }
+  .carousel-2 {
+    height: 75vh;
+  }
+
+  .review {
+    height: 100vh;
+  }
+  .series {
+    height: 100vh;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .rating {
+    height: 90vh;
+  }
+
+  .news {
+    height: 65vh;
+    margin-bottom: 15vh;
+  }
+  .carousel-2 {
+    height: 75vh;
+  }
+
+  .review {
+    height: 85vh;
+  }
+  .series {
+    height: 100vh;
+  }
+}
+
+.header-video1 {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 40px;
+  width: 40px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-color: red;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 25px;
+  color: white;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 25px;
+  color: white;
 }
