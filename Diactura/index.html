@@ -1,434 +1,1169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bithour" />
+    <meta name="author" content="Bithour" />
+    <title>Bithour</title>
+    <!-- BOOTSTRAP AND THEIR DEPENDENCIES -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <!-- ICON UTILITIES -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- Optional theme -->
+    <!-- ANOTHER UTITILITES -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
-      crossorigin="anonymous"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
-    <title>HOME</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- CUSTOM UTILITIES -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
   </head>
-  <body class="bg-dark">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-0" style="border-radius: 0%;">
-      <a class="navbar-brand" href="#"
-        ><img src="logo.jpg" width="30" height="30" alt=""
-      /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <body>
+    <div
+      id="loader"
+      class="bg-full-dark"
+      style="
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        overflow: hidden;
+        padding-top: 40vh;
+      "
+    >
+      <div class="mx-auto text-center animated bounce">
+        <img src="img/logo-inverse.png" style="max-height: 48px;" />
+      </div>
+    </div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item active">
-            <a class="nav-link mx-4" href="#"
-              >BLOG <span class="sr-only">(current)</span></a
+        <nav class="navbar navbar-expand-lg fixed-top bg-full-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <div class="img-1" style="width: 45px; height:45px;">
+                <img src="asset/logo/Logo Diactura.png" style="max-height: 48px;" />
+              </div>
+            </a>
+
+            <button
+              class="navbar-toggler text-white"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-4" href="#">TALK</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-4" href="#">MAGAZINE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-4" href="#">DISCUSSION</a>
-          </li>
-      </div>
-    </nav>
+              <ion-icon class="text-white" name="menu"></ion-icon>
+            </button>
 
-    <div class="header1" style="background-image: url('film1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center ;">
-      <!-- Mask & flexbox options-->
-      <!-- <div class="header1 mask rgba-gradient align-items-center"> -->
-        <!-- Content -->
-        <div class="container">
-          <!--Grid row-->
-          <div class="row">
-            <!--Grid column-->
-            <div class="col-md-8 white-text text-center text-md-left">
-              <p class="h1 text-light font-weight-bold" id="title2">Tayang Saat Wabah Corona, Peninsula Tembus Sejuta Penonton dalam 4 Hari</p>
-              <h6 class="text-light"> Kevin Kevin</h6>
-              <button class="btn btn-danger">BACA SELENGKAPNYA</button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </div>
-        <!-- Content -->
-      </div>
-      <!-- Mask & flexbox options-->
-    </div>
-
-
-    
-    <div class="bg-dark">
-
-        <!-- Content -->
-        <p class="h2 text-white mx-2">NEWS</p>
-        <div class="container-fluid">
-          <!--Grid row-->
-          <div class="news row">
-            <!--Grid column-->
-            <div class="col-sm-8"style="background-image: url('film2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center ;"></div>
-            <div class="col-sm-4 white-text text-center text-md-left bg-white">
-              <label class="btn btn-danger my-xl-5">TOP NEWS</label>
-              <h2 class="font-weight-bold my-xl-5">The Old Guard: Charlize Theron yang Perkasa tapi Diam-Diam Merana </h2>
-              <h6 class="mb-4"> Kevin Kevin</h6>
-               </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </div>
-        <!-- Content -->
-      </div>
-
-      <div class="view my-3">
-        <p class="h2 text-white mx-2">REVIEW</p>
-        <!-- Content -->
-        <div class="container-fluid">
-          <!--Grid row-->
-          <div class="row" >
-            <!--Grid column-->
-            <div class="col-sm-5">
-              <img src="film3.jpg" style="border-radius: 10px; width: 500px; height: 500px;">
-            </div>
-            <div class="col-sm-4 text-white text-center text-md-left mt-xl-5 mb-5">
-              
-              <h2 class="font-weight-bold mt-sm-5">MULAN </h2>
-              <p class="h3 mb-4"> Nah, di film Mulan (2020) kali ini, sang penulis cerita coba menghadirkan ulang karakter Mulan yang sebenarnya, sesuai dengan tokoh asli yang mengispirasinya. Tapi di alur cerita kali ini, langsung dimulai dari Mulan dewasa, sesaat sebelum Ia memutuskan mengabdi sebagai seorang prajurit, untuk menggantikan ayahnya yang sudah tua, cacat dan sakit-sakitan</p>
-              <button class="btn btn-danger">BACA SELENGKAPNYA</button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </div>
-        <!-- Content -->
-      </div>
-
-  
-
-
-
-      <div class="my-5 text-center container">
-        <div class="row mb-2">
-           <div class="col text-center">
-              <h1>Carousel with outer controls</h1>
-              <p class="lead">Does what it says on the tin.</p>
-           </div>
-        </div>
-        <div class="row d-flex align-items-center">
-           <div class="col-1 d-flex align-items-center justify-content-center">
-              <a href="#carouselExampleIndicators" role="button" data-slide="prev">
-                 <div class="carousel-nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
-                       <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mx-3">
+                <li class="nav-item mx-3">
+                  <a class="nav-link text-white pl-sm-3" href="#">
+                    BLOG
+                  </a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link text-white pl-sm-3" href="#">
+                    TALK
+                  </a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link text-white ml-sm-3" href="#">
+                    MAGAZINE
+                  </a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link text-white ml-sm-3" href="#">
+                    DISCUSSION
+                  </a>
+                </li>
+                <li class="nav-item mx-3">
+                 
+                  <form class="form-inline my-2 my-lg-0 mx-4">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                      <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
                     </svg>
-                 </div>
-              </a>
-           </div>
-           <div class="col-10">
-              <!--Start carousel-->
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-     
-                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                       <div class="row">
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun04.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun05.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
-                             <h3>Hi.</h3>
-                          </div>
-                       </div>
+                    <input
+                      class="form-control mx-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                      style="background-color: black; border-color: black;"
+                    />
+                  </form>
+                </li>
+                <li class="nav-item" style="margin-left: 400px;">
+                  <a class="nav-link text-white ml-sm-3" href="#">
+                    MASUK
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+
+
+      
+      <section id="carousel">
+        <div class="carousel-1">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active item-cover"
+                style="
+                  background-image: url('https://i.imgur.com/NnzxG4S.jpg');
+                "
+              >
+              
+                <div class="container-fluid carousel-caption d-none d-md-block overlay">
+                  <!-- <div class="overlay"> -->
+                  <!--Grid row-->
+                    <div class="row" style="margin-top: 220px; margin-left:150px">
+                      <!--Grid column-->
+                      <div class="col-md-8 white-text text-center text-md-left">
+                        <p class="h1 text-white font-weight-bold" id="title2">
+                          Tayang Saat Wabah Corona, Peninsula Tembus Sejuta
+                          Penonton dalam 4 Hari
+                        </p>
+                        <h6 class="my-4" style="color: rgb(148, 148, 148);">Terry Laksana - 20 Juli 2020</h6>
+                        <button class="btn btn-danger" style="width: 210px; height: 55px;">
+                          <p class="pt-2" style="
+                          font-weight: 5px;">
+                          BACA SELENGKAPNYA
+                          </p>
+                        </button>
+                      </div>
+                      <!--Grid column-->
                     </div>
-                    <div class="carousel-item">
-                       <div class="row">
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                       </div>
+                    <!--Grid row-->
+                   <!-- </div> -->
+                </div>
+              </div>
+              <div
+                class="carousel-item item-cover"
+                style="
+                  background-image: url('https://i.imgur.com/w439mEw.jpg');
+                "
+              >
+                <div class="container-fluid carousel-caption d-none d-md-block overlay">
+                  <!--Grid row-->
+                  <div class="row" style="margin-top: 220px; margin-left:150px">
+                    <!--Grid column-->
+                    <div class="col-md-8 white-text text-center text-md-left">
+                      <p class="h1 text-white font-weight-bold" id="title2">
+                        Tayang Saat Wabah Corona, Peninsula Tembus Sejuta
+                        Penonton dalam 4 Hari
+                      </p>
+                      <h6 class="my-4" style="color: rgb(148, 148, 148);">Terry Laksana - 20 Juli 2020</h6>
+                      <button class="btn btn-danger" style="width: 210px; height: 55px;">
+                        <p class="pt-2" style="
+                        font-weight: 5px;">
+                        BACA SELENGKAPNYA
+                        </p>
+                      </button>
                     </div>
-                 </div>
+                    <!--Grid column-->
+                  </div>
+                  <!--Grid row-->
+                </div>
               </div>
-              <!--End carousel-->
-           </div>
-           <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-slide="next">
-              <div class="carousel-nav-icon">
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
-                 </svg>
+              <div
+                class="carousel-item item-cover"
+                style="
+                  background-image: url('https://i.imgur.com/cpIrOo1.jpg');
+                "
+              >
+                <div class="container-fluid carousel-caption d-none d-md-block overlay">
+                  <!--Grid row-->
+                  <div class="row" style="margin-top: 220px; margin-left:150px">
+                    <!--Grid column-->
+                    <div class="col-md-8 white-text text-center text-md-left">
+                      <p class="h1 text-white font-weight-bold" id="title2">
+                        Tayang Saat Wabah Corona, Peninsula Tembus Sejuta
+                        Penonton dalam 4 Hari
+                      </p>
+                      <h6 class="my-4" style="color: rgb(148, 148, 148);">Terry Laksana - 20 Juli 2020</h6>
+                        <button class="btn btn-danger" style="width: 210px; height: 55px;">
+                          <p class="pt-2" style="
+                          font-weight: 5px;">
+                          BACA SELENGKAPNYA
+                          </p>
+                        </button>
+                    </div>
+                    <!--Grid column-->
+                  </div>
+                  <!--Grid row-->
+                </div>
               </div>
+            </div>
+
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+              id="carousel-control-1a"
+            >
+
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+              id="carousel-control-1b"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="rating" class="bg-full-dark">
+        <div class="rating">
+          <div class="mt-5 mx-4">
+            <div class="d-flex justify-content-between w-100">
+              <p style="font-size:30px; font-weight: 450;">RATING</p>
+              <p class="text-muted justify-content-between pt-2"  style="font-size:20px">Lihat selengkapnya</p>
+            </div>
+          </div>
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container-fluid mx-1" id="cont-1">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-dark">
+                        
+                        <img
+                          class="card-img-top card-1"
+                          src="https://i.imgur.com/MY7qIHk.jpg "
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                          height="auto"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Deadpool
+                          </h5>
+                          <p class="card-text text-muted"> 
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            42%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/MY7qIHk.jpg "
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                          
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Zoolander
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            60%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/BVfeWP8.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Jurasic
+                            
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            90%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/lweGxbJ.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Jurasic
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            90%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="carousel-item">
+                <div class="container-fluid" id="cont-1">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/MY7qIHk.jpg "
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Deadpool
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            42%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/MY7qIHk.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Zoolander
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            60%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/BVfeWP8.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Jurasic
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            90%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="https://i.imgur.com/lweGxbJ.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Jurasic
+                          </h5>
+                          <p class="card-text text-muted">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                            </svg>
+                            90%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="news">
+          <div class="mt-5 mx-4">
+            <div class="d-flex justify-content-between w-100">
+              <p style="font-size:30px; font-weight: 450;">NEWS</p>
+              <p class="text-muted justify-content-between pt-2"  style="font-size:20px">Lihat selengkapnya</p>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <!--Grid row-->
+            <div class="row news">
+              <!--Grid column-->
+              <div class="col-xl-8" style="background-image: url('asset/Gambar/news.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center ;"></div>
+              <div class="col text-black text-center text-md-left bg-white pl-5">
+                <label class="text-black" style="background: #E31A20; border-radius: 5px; margin-top: 50px;"><p class="px-5 pt-3">TOP NEWS</p></label>
+                <h2 class="font-weight-bold text-black my-xl-5">The Old Guard: Charlize Theron yang Perkasa tapi Diam-Diam Merana </h2>
+                <h6 class="mb-4 text-muted"> Kevin Kevin</h6>
+                </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        <!-- Content -->
+        </div>
+      </section>
+
+
+
+
+      
+      <section id="carousel-2" class="bg-full-dark">
+        <div class="carousel-2">
+          <div
+            id="carouselExampleControls2"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="container-fluid" id="cont-2">
+                  <div class="row mx-5">
+                    <div class="col ">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="asset/Gambar/Berita1.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px; min-width: 100px; min-height: 100px;"
+                        />
+                        <div class="card-body text-reponsive">
+                          <h5 class="card-title text-white">
+                            Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Won
+                          </h5>
+                          <p class="card-text text-muted">
+                            Kevin Kevin
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="asset/Gambar/Berita1.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;  min-width: 100px; min-height: 100px;"
+                      
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Won
+                          </h5>
+                          <p class="card-text text-muted">
+                            Kevin Kevin
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="asset/Gambar/Berita1.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px;  min-width: 100px; min-height: 100px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Won
+                          </h5>
+                          <p class="card-text text-muted">
+                            Kevin Kevin
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="container-fluid" id="cont-2">
+                  <div class="row mx-5">
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="asset/Gambar/Berita1.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px; min-width: 100px; min-height: 100px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Won
+                          </h5>
+                          <p class="card-text text-muted">
+                            Kevin Kevin
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="asset/Gambar/Berita1.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px; min-width: 100px; min-height: 100px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Won
+                          </h5>
+                          <p class="card-text text-muted">
+                            Kevin Kevin
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card-dark mb-2">
+                        <img
+                          class="card-img-top"
+                          src="asset/Gambar/Berita1.jpg"
+                          alt="Card image cap "
+                          style="border-radius: 10px; min-width: 100px; min-height: 100px;"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-white">
+                            Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Won
+                          </h5>
+                          <p class="card-text text-muted">
+                            Kevin Kevin
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+                  </div>
+                </div>
+              </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls2"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls2"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+
+
+        <section class="review">
+          <div class="review">
+            <div class="mt-5 mx-5">
+              <div class="d-flex justify-content-between w-100">
+                <p class="h3">REVIEW</p>
+                <p class="text-muted justify-content-between pt-2"  style="font-size:20px">Lihat selengkapnya</p>
+              </div>
+            </div>
+
+
+            <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="container-fluid">
+                    <!--Grid row-->
+                    <div class="row" >
+                      <!--Grid column-->
+                      <div class="col-sm-5 mx-5 ml-3 ">
+                        <img src="https://i.imgur.com/53pTCDI.jpg" style="border-radius: 10px; width: 100%; height: 100%;">
+                      </div>
+                      <div class="col-sm-5 text-white text-center text-md-left mb-5">
+                        <h2 class="font-weight-bold mb-4">MULAN </h2>
+                        <p class= "mb-4" style="font-size: 1.5vw;"> Nah, di film Mulan (2020) kali ini, sang penulis cerita coba menghadirkan ulang karakter Mulan yang sebenarnya, sesuai dengan tokoh asli yang mengispirasinya. Tapi di alur cerita kali ini, langsung dimulai dari Mulan dewasa, sesaat sebelum Ia memutuskan mengabdi sebagai seorang prajurit, untuk menggantikan ayahnya yang sudah tua, cacat dan sakit-sakitan</p>
+                        <p class="mb-4" style="font-size: 23px;">
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill mr-2" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                          </svg>80%</p>
+                          <button class="btn btn-danger" style="width: 210px; height: 55px;">
+                            <p class="pt-2" style="
+                            font-weight: 5px;">
+                            BACA SELENGKAPNYA
+                            </p>
+                          </button>
+                      </div>
+                      <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="container-fluid">
+                    <!--Grid row-->
+                    <div class="row" >
+                      <!--Grid column-->
+                      <div class="col-sm-5 mx-5 ml-3 ">
+                        <img src="https://i.imgur.com/53pTCDI.jpg" style="border-radius: 10px; width: 100%; height: 100%;">
+                      </div>
+                      <div class="col-sm-5 text-white text-center text-md-left mb-5">
+                        <h2 class="font-weight-bold mb-4">MULAN </h2>
+                        <p class= "mb-4" style="font-size: 1.5vw;"> Nah, di film Mulan (2020) kali ini, sang penulis cerita coba menghadirkan ulang karakter Mulan yang sebenarnya, sesuai dengan tokoh asli yang mengispirasinya. Tapi di alur cerita kali ini, langsung dimulai dari Mulan dewasa, sesaat sebelum Ia memutuskan mengabdi sebagai seorang prajurit, untuk menggantikan ayahnya yang sudah tua, cacat dan sakit-sakitan</p>
+                        <p class="mb-4" style="font-size: 23px;">
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill mr-2" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                          </svg>80%</p>
+                          <button class="btn btn-danger" style="width: 210px; height: 55px;">
+                            <p class="pt-2" style="
+                            font-weight: 5px;">
+                            BACA SELENGKAPNYA
+                            </p>
+                          </button>
+                      </div>
+                      <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="container-fluid">
+                    <!--Grid row-->
+                    <div class="row" >
+                      <!--Grid column-->
+                      <div class="col-sm-5 mx-5 ml-3 ">
+                        <img src="https://i.imgur.com/53pTCDI.jpg" style="border-radius: 10px; width: 100%; height: 100%;">
+                      </div>
+                      <div class="col-sm-5 text-white text-center text-md-left mb-5">
+                        <h2 class="font-weight-bold mb-4">MULAN </h2>
+                        <p class= "mb-4" style="font-size: 1.5vw;"> Nah, di film Mulan (2020) kali ini, sang penulis cerita coba menghadirkan ulang karakter Mulan yang sebenarnya, sesuai dengan tokoh asli yang mengispirasinya. Tapi di alur cerita kali ini, langsung dimulai dari Mulan dewasa, sesaat sebelum Ia memutuskan mengabdi sebagai seorang prajurit, untuk menggantikan ayahnya yang sudah tua, cacat dan sakit-sakitan</p>
+                        <p class="mb-4" style="font-size: 23px;">
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-fill mr-2" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                          </svg>80%</p>
+                          <button class="btn btn-danger" style="width: 210px; height: 55px;">
+                            <p class="pt-2" style="
+                            font-weight: 5px;">
+                            BACA SELENGKAPNYA
+                            </p>
+                          </button>
+                      </div>
+                      <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
               </a>
-           </div>
+              <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+
+          </div>
+        </section>
+
+
+
+
+        
+      
+
+
+
+
+       <section id="series">
+        <div class="series">
+        <div class="mt-5 mx-5">
+          <div class="d-flex justify-content-between w-100">
+            <p class="h3">SERIES</p>
+            <p class="text-muted justify-content-between pt-2"  style="font-size:20px">Lihat selengkapnya</p>
+          </div>
         </div>
-     </div>
+          <div
+            id="carouselExampleIndicators6"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active item-cover-2"
+                style="
+                  background-image: url('asset/Gambar/Banner4.jpeg');
+                "
+              >
+              
+                <div class="container-fluid carousel-caption d-none d-md-block overlay">
+                  <!-- <div class="overlay"> -->
+                  <!--Grid row-->
+                  
+                   <!-- </div> -->
+                </div>
+              </div>
+              <div
+                class="carousel-item item-cover-2"
+                style="
+                  background-image: url('asset/Gambar/Banner2.jpg');
+                "
+              >
+                <div class="container-fluid carousel-caption d-none d-md-block overlay">
+                  
+                </div>
+              </div>
+              <div
+                class="carousel-item item-cover-2"
+                style="
+                  background-image: url('asset/Gambar/Banner3.jpg');
+                "
+              >
+                <div class="container-fluid carousel-caption d-none d-md-block overlay">
+                  
+                </div>
+              </div>
+            </div>
 
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators6"
+              role="button"
+              data-slide="prev"
+              id="carousel-control-1a"
+            >
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container my-5">
-
-  
-      <!--Carousel Wrapper-->
-      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-  
-        <!--Controls-->
-        <div class="controls-top">
-          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators6"
+              role="button"
+              data-slide="next"
+              id="carousel-control-1b"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
-        <!--/.Controls-->
-  
-        <!--Indicators-->
-        <ol class="carousel-indicators">
-          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-          <li data-target="#multi-item-example" data-slide-to="1"></li>
-          <li data-target="#multi-item-example" data-slide-to="2"></li>
-        </ol>
-        <!--/.Indicators-->
-  
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-  
-          <!--First slide-->
-          <div class="carousel-item active">
-  
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
-              </div>
-              
+      </section>
 
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <!--/.First slide-->
-  
-          <!--Second slide-->
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(20).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(21).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
-              </div>
-              
 
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(22).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
-              </div>
-          </div>
   
+      <section class="animation">
+        <div class="animation">
+          <div class="mt-5 mx-5">
+            <div class="d-flex justify-content-between w-100">
+              <p class="h3">ANIMATION</p>
+              <p class="text-muted justify-content-between pt-2"  style="font-size:20px">Lihat selengkapnya</p>
+            </div>
           </div>
-          <!--/.Second slide-->
-  
-          <!--Third slide-->
-          <div class="carousel-item">
+          <div class="container-fluid">
             <div class="row">
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(23).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
+              <div class="col">
+                <img src="asset/Gambar/Kartun1.jpeg" style="height: 510px;"/>
               </div>
-  
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(24).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
-                </div>
+              <div class="col">
+                <img src="asset/Gambar/Kartun3.jpg" style="height: 510px;"/>
               </div>
-              
+              <div class="col">
+                <img src="asset/Gambar/kartun1.jpeg" style="height: 510px;"/>
+              </div>
+              <div class="col">
+                <img src="asset/Gambar/Kartun3.jpg" style="height: 510px;"/>
+              </div>
+            </div>
+            <div class="row my-4">
+              <img src="asset/Gambar/Video Kartun.jpg" style="width: 100%; height: 90vh;">
+            </div>
 
-              <div class="col-md-4">
-                <div class="card-dark mb-2">
-                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg "
-                    alt="Card image cap " style="border-radius: 10px;">
-                  <div class="card-body">
-                    <h4 class="card-title text-white"> Lee Jung Hyun Tanggapi Prestasi Menakjubkan 'Peninsula', Puji Habis-Habisan Kang Dong Wone</h4>
-                    <p class="card-text text-muted">Kevin Kevin, 20 Juli 2020</p>
-                  </div>
+            <div class="row">
+              <div class="mt-5 mx-5">
+                <div class="d-flex justify-content-between w-100">
+                  <p class="h1 mb-4" style="font-weight: 800;">RIKI RHINO</p>
+                  <p class="text-muted justify-content-between pt-2"  style="font-size:20px">10 April 2020</p>
                 </div>
+                <p class="text-white" style="font-size:30px">Riki adalah Badak Sumatera muda yang kehilangan culanya, setelah diambil oleh pemburu Mr. Jak. Untuk mendapatkan kembali cula yang telah dicuri, Riki memulai petualangan seru bersama Beni. Riki kemudian mendapatkan cula dengan kekuatan tersembunyi yang diperoleh dari hewan yang diselamatkannya. Kekuatan ini membuat Riki mampu melakukan keahlian hewan lain dalam waktu tertentu... </p>
+                <button class="btn btn-danger my-4" style="width: 210px; height: 55px;">
+                  <p class="pt-2" style="
+                  font-weight: 5px;">
+                  BACA SELENGKAPNYA
+                  </p>
+                </button>
               </div>
+
+              
+            </div>
           </div>
-          </div>
-          <!--/.Third slide-->
-  
         </div>
-        <!--/.Slides-->
-  
-      </div>
-      <!--/.Carousel Wrapper-->
-  
-  
-    </div>
+      </section>
 
-  <!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
-          alt="First slide" style="border-radius: 10px;">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
-      </div>
+      <section class="column">
+        <div class="column">
+          <div class="mt-5 mx-5">
+            <div class="d-flex justify-content-between w-100">
+              <p class="h3">COLUMN</p>
+              <p class="text-muted justify-content-between pt-2"  style="font-size:20px">Lihat selengkapnya</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-5">
+              <img src="asset/Illustrasi/Asset 3@4x.png" style="width: 596px; height: 596px;">
+            </div>
+            <div class="col">
+              <div id="carouselExampleControls8" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="container-fluid" id="cont-2">
+                      <div class="row mx-5">
+                        <div class="col ">
+                          <div class="card-dark mb-2">
+                            <img
+                              class="card-img-top"
+                              src="asset/Gambar/Column1.jpg"
+                              alt="Card image cap "
+                              style="border-radius: 10px; width: 325px;
+                              height: 389px;"
+                            />
+                            <div class="card-body text-reponsive">
+                              <h5 class="card-title text-white">
+                                Top 3: Potret di Balik Layar Film-Film Terkenal, Beda dengan Aslinya
+                              </h5>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col">
+                          <div class="card-dark mb-2">
+                            <img
+                              class="card-img-top"
+                              src="asset/Gambar/Column 1.jpg"
+                              alt="Card image cap "
+                              style="border-radius: 10px; width: 325px;
+                              height: 389px;"
+                            />
+                            <div class="card-body text-reponsive">
+                              <h5 class="card-title text-white">
+                                Top 3: Potret di Balik Layar Film-Film Terkenal, Beda dengan Aslinya</h5>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container-fluid" id="cont-2">
+                      <div class="row mx-5">
+                        <div class="col ">
+                          <div class="card-dark mb-2">
+                            <img
+                              class="card-img-top"
+                              src="asset/Gambar/Column1.jpg"
+                              alt="Card image cap "
+                              style="border-radius: 10px; width: 325px;
+                              height: 389px;"
+                            />
+                            <div class="card-body text-reponsive">
+                              <h5 class="card-title text-white">
+                                Top 3: Potret di Balik Layar Film-Film Terkenal, Beda dengan Aslinya
+                              </h5>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col">
+                          <div class="card-dark mb-2">
+                            <img
+                              class="card-img-top"
+                              src="asset/Gambar/Column 1.jpg"
+                              alt="Card image cap "
+                              style="border-radius: 10px; width: 325px;
+                              height: 389px;"
+                            />
+                            <div class="card-body text-reponsive">
+                              <h5 class="card-title text-white">
+                                Top 3: Potret di Balik Layar Film-Film Terkenal, Beda dengan Aslinya</h5>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls8" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls8" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="our-product" class="pt-5 bg-full-dark">
+        <div class="container-fluid mx-5 ">
+          <div class="row p-t-60 p-b-30">
+            <div class="col-md-4 m-t-15" style="">
+              <div class="d-block d-xl-none d-md-none m-t-30"></div>
+              <p class="is-montserrat-font h2">DIACTURA</p>
+              <p class="font-08 m-t-30">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+
+            <div class="col-md-2 m-t-15" style="line-height: 2em;">
+              <p class="is-aller-semibold font-12">Navigation</p>
+              <a href="#" class="m-b-15 font-09 text-white">About </a><br />
+              <a href="#" class="m-b-15 font-09 text-white">Our Services </a
+              ><br />
+              <a href="#" class="m-b-15 font-09 text-white">Portfolio</a><br />
+              <a href="#top" class="m-b-15 font-09 text-white">Back to Top</a
+              ><br />
+            </div>
+
+            <div class="col-md-3 m-t-15 text-white">
+              <p class="font-11">Follow Us</p>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon class="ml-2" name="logo-facebook"></ion-icon
+              ></a>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon class="ml-2" name="logo-twitter"></ion-icon
+              ></a>
+              <a class="text-white font-18" target="_blank" href="#"
+                ><ion-icon class="ml-2" name="logo-youtube"></ion-icon
+              ></a>
+              <p class="font-09 m-t-30 m-b--0">Or contact us on</p>
+              <a target="_blank" href="tel:+123" class="text-white font-08"
+                >+12 3434 512 4</a
+              ><br />
+              <a target="_blank" href="tel:+123" class="text-white font-08"
+                >marketing@bithourproduction.com</a
+              >
+            </div>
+
+            <div class="col-md-3 m-t-15" style="line-height: 2em;">
+              <p class="is-aller-semibold font-12">For Bussiness Inquiries</p>
+              <a
+                class="border text-white btn-xs custom-pad-btn is-rounded"
+                href="tel:+123"
+                >+12 3434 512 4</a
+              >
+            </div>
+          </div>
+          <div class="row" style="border-top: 5px solid white; margin-right: 100px;">
+              <p class="mt-3" style= "">© 2020 Diactura. All Rights Deserved</p>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
-          alt="Second slide" style="border-radius: 10px;">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Secondary text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
-          alt="Third slide" style="border-radius: 10px;">
-        <div class="mask rgba-black-slight" style="border-radius: 10px;"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
-        <p>Third text</p>
-      </div>
-    </div>
-  </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->
-  
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-    </body>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#app")
+          .imagesLoaded()
+          .always(function (instance) {})
+          .done(function (instance) {
+            $("#loader").remove();
+          })
+          .fail(function () {
+            $("#loader").remove();
+          })
+          .progress(function (instance, image) {
+            var result = image.isLoaded ? "loaded" : "broken";
+            console.log("image is " + result + " for " + image.img.src);
+          });
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000,
+      });
+    </script>
+  </body>
 </html>
