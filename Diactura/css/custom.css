@@ -746,7 +746,7 @@ html {
 }
 
 .item-cover-2 {
-  height: 100vh;
+  height: 95vh;
   background: no-repeat center center scroll;
   background-size: cover;
   position: relative;
@@ -957,4 +957,20 @@ html {
   display: inline-block;
 }
 
+.card-1{
+  width: 334px;
+  height: 484px; 
+  object-fit: cover;
+}
 
+.card-2{
+  width: 450px;
+  height: 357px;
+  object-fit: cover;
+}
+
+.card-3{
+  width: 500px;
+  height: 603px;
+  object-fit: cover;
+}
